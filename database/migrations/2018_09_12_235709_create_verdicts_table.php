@@ -13,7 +13,7 @@ class CreateVeredictsTable extends Migration
      */
     public function up()
     {
-        Schema::create('veredicts', function (Blueprint $table) {
+        Schema::create('verdicts', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('report_id');
             $table->unsignedInteger('user_id');
@@ -31,6 +31,6 @@ class CreateVeredictsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('veredicts');
+        Schema::dropIfExists('verdicts');
     }
 }
