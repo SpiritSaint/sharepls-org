@@ -5,13 +5,13 @@ namespace App\Http\Controllers\API;
 use App\Models\Veredict;
 use App\Http\Controllers\Controller;
 
-use App\Http\Requests\API\Veredict\IndexRequest;
-use App\Http\Requests\API\Veredict\StoreRequest;
-use App\Http\Requests\API\Veredict\ShowRequest;
-use App\Http\Requests\API\Veredict\UpdateRequest;
-use App\Http\Requests\API\Veredict\DestroyRequest;
+use App\Http\Requests\API\Verdict\IndexRequest;
+use App\Http\Requests\API\Verdict\StoreRequest;
+use App\Http\Requests\API\Verdict\ShowRequest;
+use App\Http\Requests\API\Verdict\UpdateRequest;
+use App\Http\Requests\API\Verdict\DestroyRequest;
 
-class VeredictController extends Controller
+class VerdictController extends Controller
 {
     /**
      * Display a listing of the resource.
