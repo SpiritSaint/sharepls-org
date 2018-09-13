@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\API\Veredict;
+namespace App\Http\Requests\API\Verdict;
 
 use Illuminate\Foundation\Http\FormRequest;
 
