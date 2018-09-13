@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Models\Veredict;
+use App\Models\Verdict;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\API\Verdict\IndexRequest;
@@ -37,10 +37,10 @@ class VerdictController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Veredict  $veredict
+     * @param  \App\Models\Verdict  $veredict
      * @return \Illuminate\Http\Response
      */
-    public function show(ShowRequest $request, Veredict $veredict)
+    public function show(ShowRequest $request, Verdict $veredict)
     {
         //
     }
@@ -49,10 +49,10 @@ class VerdictController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Veredict  $veredict
+     * @param  \App\Models\Verdict  $veredict
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateRequest $request, Veredict $veredict)
+    public function update(UpdateRequest $request, Verdict $veredict)
     {
         //
     }
@@ -60,10 +60,10 @@ class VerdictController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Veredict  $veredict
+     * @param  \App\Models\Verdict  $veredict
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DestroyRequest $request, Veredict $veredict)
+    public function destroy(DestroyRequest $request, Verdict $veredict)
     {
         //
     }
