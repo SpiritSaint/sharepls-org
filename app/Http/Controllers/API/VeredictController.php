@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Veredict;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Veredict\IndexRequest;
+use App\Http\Requests\API\Veredict\StoreRequest;
+use App\Http\Requests\API\Veredict\ShowRequest;
+use App\Http\Requests\API\Veredict\UpdateRequest;
+use App\Http\Requests\API\Veredict\DestroyRequest;
 
 class VeredictController extends Controller
 {
@@ -13,7 +18,7 @@ class VeredictController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class VeredictController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class VeredictController extends Controller
      * @param  \App\Models\Veredict  $veredict
      * @return \Illuminate\Http\Response
      */
-    public function show(Veredict $veredict)
+    public function show(ShowRequest $request, Veredict $veredict)
     {
         //
     }
@@ -47,7 +52,7 @@ class VeredictController extends Controller
      * @param  \App\Models\Veredict  $veredict
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Veredict $veredict)
+    public function update(UpdateRequest $request, Veredict $veredict)
     {
         //
     }
@@ -58,7 +63,7 @@ class VeredictController extends Controller
      * @param  \App\Models\Veredict  $veredict
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Veredict $veredict)
+    public function destroy(DestroyRequest $request, Veredict $veredict)
     {
         //
     }

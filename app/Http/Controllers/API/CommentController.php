@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Comment;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Comment\IndexRequest;
+use App\Http\Requests\API\Comment\StoreRequest;
+use App\Http\Requests\API\Comment\ShowRequest;
+use App\Http\Requests\API\Comment\UpdateRequest;
+use App\Http\Requests\API\Comment\DestroyRequest;
 
 class CommentController extends Controller
 {
@@ -13,7 +18,7 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -21,10 +26,10 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  StoreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -32,10 +37,11 @@ class CommentController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  ShowRequest  $request
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function show(Comment $comment)
+    public function show(ShowRequest $request, Comment $comment)
     {
         //
     }
@@ -43,11 +49,11 @@ class CommentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  UpdateRequest  $request
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comment $comment)
+    public function update(UpdateRequest $request, Comment $comment)
     {
         //
     }
@@ -55,10 +61,11 @@ class CommentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  DestroyRequest  $request
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comment $comment)
+    public function destroy(DestroyRequest $request, Comment $comment)
     {
         //
     }

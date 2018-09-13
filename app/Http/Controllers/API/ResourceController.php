@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Resource;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Resource\IndexRequest;
+use App\Http\Requests\API\Resource\StoreRequest;
+use App\Http\Requests\API\Resource\ShowRequest;
+use App\Http\Requests\API\Resource\UpdateRequest;
+use App\Http\Requests\API\Resource\DestroyRequest;
 
 class ResourceController extends Controller
 {
@@ -13,7 +18,7 @@ class ResourceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class ResourceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class ResourceController extends Controller
      * @param  \App\Models\Resource  $resource
      * @return \Illuminate\Http\Response
      */
-    public function show(Resource $resource)
+    public function show(ShowRequest $request, Resource $resource)
     {
         //
     }
@@ -47,7 +52,7 @@ class ResourceController extends Controller
      * @param  \App\Models\Resource  $resource
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Resource $resource)
+    public function update(UpdateRequest $request, Resource $resource)
     {
         //
     }
@@ -58,7 +63,7 @@ class ResourceController extends Controller
      * @param  \App\Models\Resource  $resource
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Resource $resource)
+    public function destroy(DestroyRequest $request, Resource $resource)
     {
         //
     }

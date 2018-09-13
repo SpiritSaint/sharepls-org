@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Location;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Location\IndexRequest;
+use App\Http\Requests\API\Location\StoreRequest;
+use App\Http\Requests\API\Location\ShowRequest;
+use App\Http\Requests\API\Location\UpdateRequest;
+use App\Http\Requests\API\Location\DestroyRequest;
 
 class LocationController extends Controller
 {
@@ -13,7 +18,7 @@ class LocationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class LocationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class LocationController extends Controller
      * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function show(Location $location)
+    public function show(ShowRequest $request, Location $location)
     {
         //
     }
@@ -47,7 +52,7 @@ class LocationController extends Controller
      * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Location $location)
+    public function update(UpdateRequest $request, Location $location)
     {
         //
     }
@@ -58,7 +63,7 @@ class LocationController extends Controller
      * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Location $location)
+    public function destroy(DestroyRequest $request, Location $location)
     {
         //
     }

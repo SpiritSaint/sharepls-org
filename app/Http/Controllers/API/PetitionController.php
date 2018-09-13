@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Petition;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Petition\IndexRequest;
+use App\Http\Requests\API\Petition\StoreRequest;
+use App\Http\Requests\API\Petition\ShowRequest;
+use App\Http\Requests\API\Petition\UpdateRequest;
+use App\Http\Requests\API\Petition\DestroyRequest;
 
 class PetitionController extends Controller
 {
@@ -13,7 +18,7 @@ class PetitionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class PetitionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class PetitionController extends Controller
      * @param  \App\Models\Petition  $petition
      * @return \Illuminate\Http\Response
      */
-    public function show(Petition $petition)
+    public function show(ShowRequest $request, Petition $petition)
     {
         //
     }
@@ -47,7 +52,7 @@ class PetitionController extends Controller
      * @param  \App\Models\Petition  $petition
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Petition $petition)
+    public function update(UpdateRequest $request, Petition $petition)
     {
         //
     }
@@ -58,7 +63,7 @@ class PetitionController extends Controller
      * @param  \App\Models\Petition  $petition
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Petition $petition)
+    public function destroy(DestroyRequest $request, Petition $petition)
     {
         //
     }

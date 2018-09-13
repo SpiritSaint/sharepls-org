@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Role;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Role\IndexRequest;
+use App\Http\Requests\API\Role\StoreRequest;
+use App\Http\Requests\API\Role\ShowRequest;
+use App\Http\Requests\API\Role\UpdateRequest;
+use App\Http\Requests\API\Role\DestroyRequest;
 
 class RoleController extends Controller
 {
@@ -13,7 +18,7 @@ class RoleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class RoleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class RoleController extends Controller
      * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show(ShowRequest $request, Role $role)
     {
         //
     }
@@ -47,7 +52,7 @@ class RoleController extends Controller
      * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(UpdateRequest $request, Role $role)
     {
         //
     }
@@ -58,7 +63,7 @@ class RoleController extends Controller
      * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
+    public function destroy(DestroyRequest $request, Role $role)
     {
         //
     }

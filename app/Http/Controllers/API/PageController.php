@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Page;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Page\IndexRequest;
+use App\Http\Requests\API\Page\StoreRequest;
+use App\Http\Requests\API\Page\ShowRequest;
+use App\Http\Requests\API\Page\UpdateRequest;
+use App\Http\Requests\API\Page\DestroyRequest;
 
 class PageController extends Controller
 {
@@ -13,7 +18,7 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class PageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class PageController extends Controller
      * @param  \App\Models\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function show(Page $page)
+    public function show(ShowRequest $request, Page $page)
     {
         //
     }
@@ -47,7 +52,7 @@ class PageController extends Controller
      * @param  \App\Models\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Page $page)
+    public function update(UpdateRequest $request, Page $page)
     {
         //
     }
@@ -58,7 +63,7 @@ class PageController extends Controller
      * @param  \App\Models\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Page $page)
+    public function destroy(DestroyRequest $request, Page $page)
     {
         //
     }

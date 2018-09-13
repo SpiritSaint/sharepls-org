@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Rating;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Rating\IndexRequest;
+use App\Http\Requests\API\Rating\StoreRequest;
+use App\Http\Requests\API\Rating\ShowRequest;
+use App\Http\Requests\API\Rating\UpdateRequest;
+use App\Http\Requests\API\Rating\DestroyRequest;
 
 class RatingController extends Controller
 {
@@ -13,7 +18,7 @@ class RatingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class RatingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class RatingController extends Controller
      * @param  \App\Models\Rating  $rating
      * @return \Illuminate\Http\Response
      */
-    public function show(Rating $rating)
+    public function show(ShowRequest $request, Rating $rating)
     {
         //
     }
@@ -47,7 +52,7 @@ class RatingController extends Controller
      * @param  \App\Models\Rating  $rating
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Rating $rating)
+    public function update(UpdateRequest $request, Rating $rating)
     {
         //
     }
@@ -58,7 +63,7 @@ class RatingController extends Controller
      * @param  \App\Models\Rating  $rating
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rating $rating)
+    public function destroy(DestroyRequest $request, Rating $rating)
     {
         //
     }

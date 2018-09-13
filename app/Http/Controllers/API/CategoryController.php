@@ -3,17 +3,23 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Category;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Category\IndexRequest;
+use App\Http\Requests\API\Category\StoreRequest;
+use App\Http\Requests\API\Category\ShowRequest;
+use App\Http\Requests\API\Category\UpdateRequest;
+use App\Http\Requests\API\Category\DestroyRequest;
 
 class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param IndexRequest $request
+     * @return void
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -21,10 +27,10 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreRequest $request
+     * @return void
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -32,10 +38,11 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
+     * @param ShowRequest $request
+     * @param  \App\Models\Category $category
+     * @return void
      */
-    public function show(Category $category)
+    public function show(ShowRequest $request, Category $category)
     {
         //
     }
@@ -43,11 +50,11 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  UpdateRequest  $request
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(UpdateRequest $request, Category $category)
     {
         //
     }
@@ -55,10 +62,11 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  DestroyRequest  $request
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(DestroyRequest $request, Category $category)
     {
         //
     }

@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Usage;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Usage\IndexRequest;
+use App\Http\Requests\API\Usage\StoreRequest;
+use App\Http\Requests\API\Usage\ShowRequest;
+use App\Http\Requests\API\Usage\UpdateRequest;
+use App\Http\Requests\API\Usage\DestroyRequest;
 
 class UsageController extends Controller
 {
@@ -13,7 +18,7 @@ class UsageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class UsageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class UsageController extends Controller
      * @param  \App\Models\Usage  $usage
      * @return \Illuminate\Http\Response
      */
-    public function show(Usage $usage)
+    public function show(ShowRequest $request, Usage $usage)
     {
         //
     }
@@ -47,7 +52,7 @@ class UsageController extends Controller
      * @param  \App\Models\Usage  $usage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Usage $usage)
+    public function update(UpdateRequest $request, Usage $usage)
     {
         //
     }
@@ -58,7 +63,7 @@ class UsageController extends Controller
      * @param  \App\Models\Usage  $usage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usage $usage)
+    public function destroy(DestroyRequest $request, Usage $usage)
     {
         //
     }

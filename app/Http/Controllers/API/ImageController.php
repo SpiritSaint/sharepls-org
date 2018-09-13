@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\Image;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\API\Image\IndexRequest;
+use App\Http\Requests\API\Image\StoreRequest;
+use App\Http\Requests\API\Image\ShowRequest;
+use App\Http\Requests\API\Image\UpdateRequest;
+use App\Http\Requests\API\Image\DestroyRequest;
 
 class ImageController extends Controller
 {
@@ -13,7 +18,7 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
@@ -24,7 +29,7 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function show(Image $image)
+    public function show(ShowRequest $request, Image $image)
     {
         //
     }
@@ -47,7 +52,7 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Image $image)
+    public function update(UpdateRequest $request, Image $image)
     {
         //
     }
@@ -58,7 +63,7 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image $image)
+    public function destroy(DestroyRequest $request, Image $image)
     {
         //
     }
