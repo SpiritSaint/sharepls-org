@@ -16,7 +16,8 @@ class PageController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param IndexRequest $request
+     * @return void
      */
     public function index(IndexRequest $request)
     {
@@ -26,8 +27,8 @@ class PageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreRequest $request
+     * @return void
      */
     public function store(StoreRequest $request)
     {
@@ -37,8 +38,9 @@ class PageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Page  $page
-     * @return \Illuminate\Http\Response
+     * @param ShowRequest $request
+     * @param  \App\Models\Page $page
+     * @return void
      */
     public function show(ShowRequest $request, Page $page)
     {
@@ -48,9 +50,9 @@ class PageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Page  $page
-     * @return \Illuminate\Http\Response
+     * @param UpdateRequest $request
+     * @param  \App\Models\Page $page
+     * @return void
      */
     public function update(UpdateRequest $request, Page $page)
     {
@@ -60,8 +62,9 @@ class PageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Page  $page
-     * @return \Illuminate\Http\Response
+     * @param DestroyRequest $request
+     * @param  \App\Models\Page $page
+     * @return void
      */
     public function destroy(DestroyRequest $request, Page $page)
     {

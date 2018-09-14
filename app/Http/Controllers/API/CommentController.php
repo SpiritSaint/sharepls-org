@@ -16,7 +16,8 @@ class CommentController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param IndexRequest $request
+     * @return void
      */
     public function index(IndexRequest $request)
     {
@@ -26,8 +27,8 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  StoreRequest  $request
-     * @return \Illuminate\Http\Response
+     * @param  StoreRequest $request
+     * @return void
      */
     public function store(StoreRequest $request)
     {
@@ -37,9 +38,9 @@ class CommentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  ShowRequest  $request
-     * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Http\Response
+     * @param  ShowRequest $request
+     * @param  \App\Models\Comment $comment
+     * @return void
      */
     public function show(ShowRequest $request, Comment $comment)
     {
@@ -49,9 +50,9 @@ class CommentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  UpdateRequest  $request
-     * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Http\Response
+     * @param  UpdateRequest $request
+     * @param  \App\Models\Comment $comment
+     * @return void
      */
     public function update(UpdateRequest $request, Comment $comment)
     {
@@ -61,9 +62,9 @@ class CommentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  DestroyRequest  $request
-     * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Http\Response
+     * @param  DestroyRequest $request
+     * @param  \App\Models\Comment $comment
+     * @return void
      */
     public function destroy(DestroyRequest $request, Comment $comment)
     {

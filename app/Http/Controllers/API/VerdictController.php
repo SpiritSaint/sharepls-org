@@ -16,7 +16,8 @@ class VerdictController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param IndexRequest $request
+     * @return void
      */
     public function index(IndexRequest $request)
     {
@@ -26,8 +27,8 @@ class VerdictController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreRequest $request
+     * @return void
      */
     public function store(StoreRequest $request)
     {
@@ -37,10 +38,11 @@ class VerdictController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Verdict  $veredict
-     * @return \Illuminate\Http\Response
+     * @param ShowRequest $request
+     * @param Verdict $verdict
+     * @return void
      */
-    public function show(ShowRequest $request, Verdict $veredict)
+    public function show(ShowRequest $request, Verdict $verdict)
     {
         //
     }
@@ -48,11 +50,11 @@ class VerdictController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Verdict  $veredict
-     * @return \Illuminate\Http\Response
+     * @param UpdateRequest $request
+     * @param Verdict $verdict
+     * @return void
      */
-    public function update(UpdateRequest $request, Verdict $veredict)
+    public function update(UpdateRequest $request, Verdict $verdict)
     {
         //
     }
@@ -60,10 +62,11 @@ class VerdictController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Verdict  $veredict
-     * @return \Illuminate\Http\Response
+     * @param DestroyRequest $request
+     * @param Verdict $verdict
+     * @return void
      */
-    public function destroy(DestroyRequest $request, Verdict $veredict)
+    public function destroy(DestroyRequest $request, Verdict $verdict)
     {
         //
     }

@@ -16,7 +16,8 @@ class ImageController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param IndexRequest $request
+     * @return void
      */
     public function index(IndexRequest $request)
     {
@@ -26,8 +27,8 @@ class ImageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreRequest $request
+     * @return void
      */
     public function store(StoreRequest $request)
     {
@@ -37,8 +38,9 @@ class ImageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
+     * @param ShowRequest $request
+     * @param  \App\Models\Image $image
+     * @return void
      */
     public function show(ShowRequest $request, Image $image)
     {
@@ -48,9 +50,9 @@ class ImageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
+     * @param UpdateRequest $request
+     * @param  \App\Models\Image $image
+     * @return void
      */
     public function update(UpdateRequest $request, Image $image)
     {
@@ -60,8 +62,9 @@ class ImageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
+     * @param DestroyRequest $request
+     * @param  \App\Models\Image $image
+     * @return void
      */
     public function destroy(DestroyRequest $request, Image $image)
     {
