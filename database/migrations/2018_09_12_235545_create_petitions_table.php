@@ -19,6 +19,11 @@ class CreatePetitionsTable extends Migration
             $table->unsignedInteger('owner_id');
             $table->unsignedInteger('creator_id');
             $table->unsignedInteger('resource_id');
+
+            $table->foreign('owner_id')->references('id')->on('users');
+            $table->foreign('creator_id')->references('id')->on('users');
+            $table->foreign('resource_id')->references('id')->on('resources');
+
             $table->text('message');
             foreach (['viewed', 'accepted', 'refused', 'declined'] as $column) {
                 $table->boolean($column);

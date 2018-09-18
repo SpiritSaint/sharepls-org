@@ -17,6 +17,8 @@ class CreateAuthorizationsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('sender_id');
             $table->unsignedInteger('receiver_id');
+            $table->foreign('sender_id')->references('id')->on('users');
+            $table->foreign('receiver_id')->references('id')->on('users');
             $table->morphs('authorizable');
             $table->string('status');
             $table->boolean('permanent');
