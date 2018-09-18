@@ -3,6 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\User as UserResource;
+use App\User as UserModel;
 
 class Authorization extends JsonResource
 {
@@ -14,6 +16,13 @@ class Authorization extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'sender' => new UserResource(UserModel::find($this->sender_id)),
+            'receiver' => new UserResource(UserModel::find($this->receiver_id)),
+            'status' => $this->status,
+            'permanent' => $this->permanent,
+            'dates' => $this->dates,
+        ];
     }
 }
