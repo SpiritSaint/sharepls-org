@@ -16,7 +16,7 @@ class CreateUsagesTable extends Migration
         Schema::create('usages', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('authorization_id');
-            $table->timestamp('used_at');
+            $table->timestamp('used_at')->nullable();
             $table->unsignedInteger('location_id');
             $table->foreign('location_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

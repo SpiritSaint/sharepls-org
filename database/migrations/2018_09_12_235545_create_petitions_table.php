@@ -22,7 +22,7 @@ class CreatePetitionsTable extends Migration
             $table->text('message');
             foreach (['viewed', 'accepted', 'refused', 'declined'] as $column) {
                 $table->boolean($column);
-                $table->timestamp($column . '_at');
+                $table->timestamp($column . '_at')->nullable();
             }
             $table->timestamps();
         });
